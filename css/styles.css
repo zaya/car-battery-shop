@@ -1,0 +1,83 @@
+@CHARSET "ISO-8859-1";
+
+body, ul#main{
+	width: 800px;
+	margin: 0 auto;
+	font-family: Arial;
+}
+
+ul#main {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f3f3f3;
+    position: fixed;
+    top: 0;
+    border: 1px solid #e7e7e7;
+/*     width: 800px; */
+}
+
+li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #808080;
+    color: white;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+section {
+	margin-top: 70px;
+}
+
+div.img {
+/*     margin-right: 10px; */
+    border: 1px solid #ccc;
+    float: left;
+    width: 150px;
+}
+
+div.last-img {
+    margin-right: 0px;
+    border: 1px solid #ccc;
+    float: right;
+    width: 152px;
+}
+
+div.img:hover, div.last-img:hover {
+    border: 1px solid #777;
+}
+
+div.img img, div.last-image img {
+    width: 100%;
+    height: auto;
+}
+
+div.last-image img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
