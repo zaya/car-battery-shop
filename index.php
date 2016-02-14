@@ -1,48 +1,29 @@
-<?php 
-$title = 'Home'; 
-$current='home';
-include("header.php");
+<?php
+$title = 'Home';
+$current = 'home';
+include ("header.php");
+include ("data.php");
 ?>
 
-<img src="img/banner.jpg" alt="Delkor Banner" width="800" height="280" style="margin-bottom: 20px;" />
+<img src="img/banner.jpg" alt="Delkor Banner" width="800" height="280"
+	style="margin: 20 0 20 0;" />
 
-<p style="margin: 0px 20px 10px 0px; font-weight: bold;">Store Locators</p>
-<div class="img" style="margin-right: 10px;">
-  <a target="_blank" href="img/fjords.jpg">
-    <img src="img/fjords.jpg" alt="Fjords" width="300" height="200">
-  </a>
-  <div class="desc">Headquarter</div>
-</div>
+<h3 style="margin: 0px 20px 10px 0px;">Store Locators</h3>
+<?php
+foreach ( $store_list as $store ) {
+	if ($store ['id'] < 4) {
+		echo "<div class='img' style='margin-right: 10px;'>";
+	} else {
+		echo "<div class='img'>";
+	}
+	echo "<a href=store.php?store_id=", urlencode ( $store ['id'] ), ">";
+	echo "<img src='",$store['img'],"' alt='",$store ['name'],"'>";
+	echo "</a>";
+	echo "<div class='desc'>", $store ['name'], "</div>";
+	echo "</div>";
+}
+?>
 
-<div class="img" style="margin-right: 10px;">
-  <a target="_blank" href="img/forest.jpg">
-    <img src="img/forest.jpg" alt="Forest" width="300" height="200">
-  </a>
-  <div class="desc">Auto Plaza</div>
-</div>
-
-<div class="img" style="margin-right: 10px;">
-  <a target="_blank" href="img/lights.jpg">
-    <img src="img/lights.jpg" alt="Northern Lights" width="300" height="200">
-  </a>
-  <div class="desc">Technic Import</div>
-</div>
-
-<div class="img" style="margin-right: 10px;">
-  <a target="_blank" href="img/lights.jpg">
-    <img src="img/lights.jpg" alt="Northern Lights" width="300" height="200">
-  </a>
-  <div class="desc">Uguumur</div>
-</div>
-
-<div class="img">
-  <a target="_blank" href="img/mountains.jpg">
-    <img src="img/mountains.jpg" alt="Mountains" width="300" height="200">
-  </a>
-  <div class="desc">Sutai</div>
-</div>
-<!-- <article> -->
 <br style="clear: both" />
-<!-- </article> -->
 
 <?php include("footer.html");?>
