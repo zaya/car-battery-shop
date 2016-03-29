@@ -104,7 +104,7 @@ td.value, tr.value {
 	border-radius: 25px;
 	border: 2px solid #6c6b62;
 	padding: 10px;
-	width: 596px;
+	width: 594px;
 	height: 100px;
 	margin-bottom: 12px;
 }
@@ -131,4 +131,9 @@ div.product_img img:hover {
 
 #product_desc {
 	font-size: 15px;
+}
+
+.validation_error {
+	color: red;
+	font-size: 13px;
 }
